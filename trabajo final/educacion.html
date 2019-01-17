@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
   <meta charset="UTF-8">
   <meta name="description" content="Hoja de Vida de Vladimir Silva Fuentes">
   <meta name="keywords" content="hoja,vida,Vladimir,silva,fuentes,ingenieria,sistemas">
@@ -11,6 +10,16 @@
 </head>
 <body>
   <header>
+    <svg width="300" height="100">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="150" cy="50" rx="150" ry="50" fill="black" />
+      <text fill="url(#grad1)" font-size="45" font-family="Tahoma" font-style="italic" x="25" y="63">VSoFtw@re</text>
+    </svg>
     <h1>Curriculum Vitae</h1>
     <h2>Nombre Completo :</h2>
     <h3>Vladimir Silva Fuentes</h3>
@@ -23,7 +32,7 @@
     <a href="index.html">Información personal</a>
     <a href="experiencia.html">Experiencia</a>
   </nav>
-  <article class="educacion">
+  <article class="cls_educacion">
     <h2>Educación</h2>
     <table name="educacion" border="1">
       <tr>
@@ -44,9 +53,15 @@
         <td>Barranquilla</td>
         <td>Si</td>
       </tr>
+      <tr>
+        <td>2019</td>
+        <td>Next University</td>
+        <td>Virtual</td>
+        <td>En curso</td>
+      </tr>
     </table>
     <h3>Agregar Estudios</h3>
-    <p>
+    <form class="nuevo_estudio">
       <b>Año:</b>
       <select class="año_estudio" name="año">
         <option value="2001">2001</option>
@@ -69,11 +84,11 @@
         <option value="2018">2018</option>
       </select><br><br>
       <b>Institución:</b>
-      <input type="text" name="Institucion"><br><br>
+      <input type="text" name="institucion" required><br><br>
       <b>Lugar:</b>
       <textarea name="Lugar" rows="2" cols="20"></textarea><br><br>
       <input type="submit" name="agregar_estudio" value="Enviar">
-    </p>
+    </form>
   </article>
   <footer>
     <p>
